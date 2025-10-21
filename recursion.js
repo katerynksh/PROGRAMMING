@@ -1,5 +1,4 @@
 let sum = [0, 1];
-
 console.log("fibonacci without recursion")
 
 function fibonacci(guantity) {
