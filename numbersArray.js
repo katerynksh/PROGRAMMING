@@ -19,5 +19,6 @@ for(let j = 0; j < numArr.length - 1; j++) {
     }
 }
 }
+
 return i
 console.log(numArr)
