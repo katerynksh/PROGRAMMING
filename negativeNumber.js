@@ -13,7 +13,6 @@ function negativeFiltering(arr =[]) {
         if (arr[i] < 0) {
             negativeNumber.push(arr[i])
         }
-    
     }
     return negativeNumber
 }
