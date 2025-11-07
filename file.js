@@ -6,4 +6,4 @@ const data = fs.readFileSync(
         flag: 'r'
     }
 );
-console.log(data.replaceAll(" ", " ‼️Катятятя✨ "));
+console.log(data.replaceAll(" ", " 💫Катятятя✨ "));
