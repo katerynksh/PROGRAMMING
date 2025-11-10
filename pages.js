@@ -1,0 +1,45 @@
+const fs = require('fs');
+const SYMBOLS_PER_PAGE = 120 * 80;
+const data = fs.readFileSync (
+    'book.txt',
+    {
+        encoding: 'utf8',
+        flag: 'r'
+    }
+);
+function countPages (symbolsInBook, symbolsOnPage) {
+    if (typeof symbolsInBook !== `number` || typeof symbolsOnPage !== `number`) {
+        return 0
+    } 
+    if (symbolsOnPage == 0 || symbolsOnPage == null) {
+        return 0  
+    }
+    return Math.ceil(symbolsInBook/Math.abs(symbolsOnPage))    
+}
+function getPage(book, pageNumber) {
+    const startIndex = SYMBOLS_PER_PAGE * (pageNumber - 1);
+    const maybeEndIndex = SYMBOLS_PER_PAGE * pageNumber;
+    const endIndex = Math.max(
+        book.lastIndexOf(' ', maybeEndIndex),
+        book.lastIndexOf('\n', maybeEndIndex)
+    );
+    if (endIndex <= startIndex) {
+        return book.slice(startIndex, maybeEndIndex);
+    } 
+    return book.slice(startIndex, endIndex);
+}
+
+
+function pagesText(data, pageNumber) {
+    if (pageNumber > countPages(data.length, SYMBOLS_PER_PAGE) || pageNumber < 1) {
+        const answer = `Ваш запит: ` + pageNumber + `. Такої сторінки не існує. Всього сторінок: ` + countPages(data.length, SYMBOLS_PER_PAGE);
+        return answer;
+    }
+    return getPage(data, pageNumber);
+}
+
+// const pagesCount = countPages(data.length, SYMBOLS_PER_PAGE)
+// console.log(pagesCount);
+//const pageText = getPage(data, pageNumber);
+const pageText = pagesText(data, 300);
+console.log(pageText);
