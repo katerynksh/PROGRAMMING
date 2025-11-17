@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const data = fs.readFileSync(
-    '2.txt',
+    'book.txt',
     {
         encoding: 'utf8',
         flag: 'r'
@@ -18,5 +18,12 @@ for (let i = 0; i < data.length; i++) {
     counters[data[i]] += 1;
 }
 
-console.log(counters)
-console.table(Object.entries(counters))
+const entries = Object.entries(counters);
+const sortedEntries = entries.sort((a, b) => b[1] - a[1]);
+
+console.log("Невідсортований масив:", counters);
+console.log("Відсортований масив від більшого до меншого:");
+console.table(sortedEntries);
+
+// console.log(counters)
+// console.table(Object.entries(counters))
