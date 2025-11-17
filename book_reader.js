@@ -32,7 +32,6 @@ function getPage(book, pageNumber) {
     } 
     return book.slice(startIndex, endIndex);
 }
-
 //якщо ввести номер сторінки більше ніж є в книзі, або менше 1, 
 //то користувача повідомлять, що такої сторінки немає
 function pagesText(data, pageNumber) {
