@@ -5,7 +5,7 @@ function negativeFiltering(arr =[]) {
     const negativeNumber = []
 
     if(!Array.isArray(arr)){
-    return `Це не масив`
+        return `Це не масив`
     }
     else console.log("Оригінальний масив:",arr)
 
