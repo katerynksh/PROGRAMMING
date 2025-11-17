@@ -2,7 +2,7 @@ const fs = require('fs');
 const SYMBOLS_PER_PAGE = 120 * 80;
 
 const data = fs.readFileSync(
-    'pg77182.txt',
+    'book.txt',
     {
         encoding: 'utf8',
         flag: 'r'
