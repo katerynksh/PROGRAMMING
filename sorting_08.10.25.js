@@ -4,7 +4,7 @@ for (let i = 0; i < 20; i++)
 {
     numArr[i] = Math.round(Math.random() * 100 - 50);
 }
-console.log(`vidro:`, numArr )
+console.log(`vidro:`, numArr)
 console.log("_______________________________________")
 
 let i = 1
@@ -14,7 +14,7 @@ function sorting(vidro)
     {
         for(let i = star + 1; i < vidro.length; i++) 
         {
-            if(vidro[star] >= vidro[i]) 
+            if(vidro[star] > vidro[i]) 
             {
                 let temp = vidro[star]
                 vidro[star] = vidro[i]

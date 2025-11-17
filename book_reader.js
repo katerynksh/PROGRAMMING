@@ -46,5 +46,5 @@ function pagesText(data, pageNumber) {
 // const pagesCount = countPages(data.length, SYMBOLS_PER_PAGE)
 // console.log(pagesCount);
 //const pageText = getPage(data, pageNumber);
-const pageText = pagesText(data, 300);
+const pageText = pagesText(data, 10);
 console.log(pageText);

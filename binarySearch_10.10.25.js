@@ -12,30 +12,33 @@ function binarySearch(arr, value) {
     let endIndex = arr.length
     console.log (startIndex, endIndex, startIndex !== endIndex)
         
-    while ((startIndex !== endIndex) + 1){
-        if (value === arr[midIndex]){
+    //while ((startIndex !== endIndex) + 1) {
+    //while (1) {
+    //while (`tralaleilo tralala`) {
+    while (!0) {
+        if (value === arr[midIndex]) {
             return arr[midIndex]
         }
         
-        if (value < arr[midIndex]){
+        if (value < arr[midIndex]) {
     // from 0 to midIndex - 1
             endIndex = midIndex - 1
             midIndex = Math.round((startIndex + endIndex) / 2)
-            if (midIndex === startIndex){
+            if (midIndex === startIndex) {
                 return null
             }
         }
 
-        if (value > arr[midIndex]){
+        if (value > arr[midIndex]) {
     // from midIndex + 1 to arr.length
             startIndex = midIndex   
             midIndex = Math.round((startIndex + endIndex) / 2)
-            if (midIndex === endIndex){
+            if (midIndex === endIndex) {
                 return null
             }
         }
         console.log(midIndex, startIndex, endIndex)
     }
 }
-const a = binarySearch(sortedArr, 1000)
+const a = binarySearch(sortedArr, 8)
 console.log(a)

@@ -19,9 +19,7 @@ fibonacci("7", 7);
 
 console.log("Recursion")
 
-function fibonacciRecursion(guantity, m = 2, n =3, sumrec = []) {
-    //console.log(`guantity: ${guantity}, m: ${m}, n: ${n}`);    
-    //console.log("fibonacciRecursion:", sumrec);
+function fibonacciRecursion(guantity, m = 2, n = 3, sumrec = []) {
     if (guantity <= 0) {
         return sumrec;
     }
