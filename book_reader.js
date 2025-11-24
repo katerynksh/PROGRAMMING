@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { Readline } = require('readline/promises');
 const SYMBOLS_PER_PAGE = 120 * 80;
 const data = fs.readFileSync (
     'book.txt',
