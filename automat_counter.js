@@ -39,7 +39,7 @@ studentInput.question("Ім'я студента: ", (nameAnswer) => {
             console.log(`Оцінки: ${student.marks.join(', ')}`);// вивід оцінок через кому
             console.log(`Середня оцінка: ${fixedAverage}`);// 
             console.log('Автомат: ' + markAutomat);// вивід округленої середньої оцінки
-              
+          
            
           studentInput.close();
         });
