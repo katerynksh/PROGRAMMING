@@ -8,11 +8,13 @@ prompt.get(['name', 'surname', 'specialty', 'group', 'marks'], function (err, re
   if (err) { return onErr(err); }
   
   const student = {
-    name: result.name,
-    surname: result.surname,
-    specialty: result.specialty,
-    group: result.group,
-    marks: result.marks.split(',').map (mark => Number(mark.trim())).filter(mark => !isNaN(mark)),
+    properties: {
+      name: { description: "Ім'я", required: true },
+      surname: { description: "Прізвище", required: true },
+      specialty: { description: "Спеціальність", required: true },
+      group: { description: "Група", required: true },
+      marks: { description: "Оцінки (через кому)", required: true },
+    }
   };
   
 
