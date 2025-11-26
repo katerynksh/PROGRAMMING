@@ -15,7 +15,6 @@ prompt.get(['name', 'surname', 'specialty', 'group', 'marks'], function (err, re
     marks: result.marks.split(',').map (mark => Number(mark.trim())).filter(mark => !isNaN(mark)),
   };
   
-
   const average = student.marks.reduce((sum, marks) => sum + marks, 0) / student.marks.length;
   const fixedAverage = average.toFixed(2);
   const markAutomat = Math.round(fixedAverage);
