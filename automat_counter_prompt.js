@@ -17,7 +17,6 @@ prompt.get(['name', 'surname', 'specialty', 'group', 'marks'], function (err, re
     }
   };
   
-
   const average = student.marks.reduce((sum, marks) => sum + marks, 0) / student.marks.length;
   const fixedAverage = average.toFixed(2);
   const markAutomat = Math.round(fixedAverage);
