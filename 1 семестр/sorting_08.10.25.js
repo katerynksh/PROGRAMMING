@@ -24,5 +24,6 @@ function sorting(vidro)
     }
     return vidro
 }
+
 console.log("sorted vidro:", sorting(numArr))
 console.log("_______________________________________")
