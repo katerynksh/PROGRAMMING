@@ -1,5 +1,3 @@
-console.log(`_____________________________________`);
-
 var prompt = require('prompt');
 
 prompt.start();
