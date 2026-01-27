@@ -5,12 +5,12 @@ function caesarCode (text, key) {
                 `o`,`p`,`q`,`r`,`s`,`t`,`u`,`v`,`w`,`x`,`y`,`z`,`A`,`B`,
                 `C`,`D`,`E`,`F`,`G`,`H`,`I`,`J`,`K`,`L`,`M`,`N`,`O`,`P`,
                 `Q`,`R`,`S`,`T`,`U`,`V`,`W`,`X`,`Y`,`Z`]
-let result = ' '
-console.log(abs.length)
-for (let i = 0; i < text.length; i++) {    
-    const newIndex = (abs.indexOf(text[i]) + key) % abs.length
-    result += abs[newIndex] 
-}
+    let result = ' '
+        console.log(abs.length)
+    for (let i = 0; i < text.length; i++) {    
+        const newIndex = (abs.indexOf(text[i]) + key) % abs.length
+        result += abs[newIndex] 
+    }
     return result
 }
 const ciphered = caesarCode(stringToEncrypt, key)
