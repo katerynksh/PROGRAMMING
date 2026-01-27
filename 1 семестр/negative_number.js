@@ -17,4 +17,5 @@ function negativeFiltering(arr =[]) {
     return negativeNumber
 }
 const a = negativeFiltering(toFilter)
+
 console.log(`від'ємні числа:`, a)
