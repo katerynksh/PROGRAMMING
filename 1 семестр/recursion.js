@@ -26,7 +26,6 @@ function fibonacciRecursion(guantity, m = 2, n = 3, sumrec = []) {
     sumrec.push(m);    
     return fibonacciRecursion(guantity - 1, n, m + n, sumrec);
 }
-
 const a = fibonacciRecursion(3);
 console.log("fibonacciRecursion 3:", a);
 

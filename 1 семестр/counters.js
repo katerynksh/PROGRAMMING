@@ -9,7 +9,6 @@ const data = fs.readFileSync(
 );
 
 const counters = {};
-
 for (let i = 0; i < data.length; i++) {
     if (counters[data[i]] === undefined) {
         counters[data[i]] = 0

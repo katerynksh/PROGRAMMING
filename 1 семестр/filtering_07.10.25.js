@@ -50,7 +50,6 @@ function filtrovane(arr =[]) {
             resultNull.push(arr[i])
         }
     }
-
     //return result
     return ["1) numbers:",resultNumber, 
         "2) string:" ,resultString, 

@@ -28,7 +28,6 @@ function binarySearch(arr, value) {
                 return null
             }
         }
-
         if (value > arr[midIndex]) {
     // from midIndex + 1 to arr.length
             startIndex = midIndex   

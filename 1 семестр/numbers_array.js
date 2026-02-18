@@ -5,7 +5,6 @@ for(let i = 0 ; i < 10; i++) {
 console.log(numArr)
 
 let i = 1
-
 function sorting(vidro) {
     for(let j = 0; j < numArr.length - 1; j++) {
         for(let i = j + 1; i < numArr.length; i++) {

@@ -1,5 +1,3 @@
-console.log(`_____________________________________`);
-
 const readline = require('readline');
 const studentInput = readline.createInterface({
   input: process.stdin, //створює інтерфейс для читання з консолі (стандартний поток вводу)

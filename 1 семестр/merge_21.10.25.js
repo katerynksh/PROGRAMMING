@@ -41,7 +41,6 @@ function mergeSort (arr){
     
     console.log({middleIndex, arr1, arr2})
     return merge(mergeSort(arr1), mergeSort(arr2))
-
 }
    
 const sorted = mergeSort([2, -9, 8, 19,])
