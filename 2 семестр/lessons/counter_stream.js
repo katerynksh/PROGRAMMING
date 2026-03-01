@@ -60,6 +60,7 @@ readFile.on('data', (chunk) => {
     //     }
     //     words[chunk[i]] += 1;
     // }
+    }
 
     const entries = Object.entries(counters);
     const sortedEntries = entries.sort((a, b) => b[1] - a[1]);
