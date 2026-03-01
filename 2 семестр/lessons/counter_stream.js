@@ -64,7 +64,6 @@ readFile.on('data', (chunk) => {
             counters[chunk[i]] = 0
         }
         counters[chunk[i]] += 1;
-<<<<<<< HEAD
     // }
     // for (let i = 0; i < chunk.length; i++) {
     //     if (chunk[i] === ' ' || chunk[i] === '\n') {
@@ -76,30 +75,6 @@ readFile.on('data', (chunk) => {
     //     words[chunk[i]] += 1;
     // }
     }
-=======
-    }
- 
-    // \p{L} - будь-яка буква (Unicode)
-    // \p{N} - будь-яка цифра
-    // [^\p{L}\p{N}]+ - шукаємо групи символів, що НЕ є буквами чи цифрами
-
-    const words = chunk
-    .toLowerCase()
-    .split(/[^\p{L}\p{N}]+/u)
-    .filter(word => word.length > 0);
-
-        allWords += words.length;
-
-    for (const word of words) {
-    //for (let word = 0; word < chunk.length; word++) {
-        if (wordCount[word] === undefined){
-            wordCount[word] = 0
-    }
-    wordCount[chunk[word]] += 1;
-    }
-
-
->>>>>>> 3bee5ea76ba0e058bc10d2efdd4a274ad6ac065e
 
 });
 
