@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button {
+                padding: 8px 16px;
+                cursor: pointer;
+                margin-bottom: 15px;
+            }
+
+            .animated-text {
+                transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                display: inline-block; 
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                filter: blur(0px);
+                margin: 5px 0;
+            }
+
+            .hidden {
+                opacity: 0;
+                transform: scale(0) rotate(180deg) translateY(-50px);
+                filter: blur(10px);
+                pointer-events: none;
+            }
+        </style>
+    </head>
+<body>
+
+<button>Показати/Сховати</button>
+<p id="text" class="animated-text">Я текст</p>
+<br>
+<p id="otherText" class="animated-text">Інший текст</p>
+
+<script>
+  const button = document.querySelector('button');
+  const textElement = document.getElementById('text');
+  const otherTextElement = document.getElementById('otherText');
+
+  button.addEventListener('click', () => {
+    textElement.textContent = "Новий текст";
+    
+    textElement.classList.toggle('hidden');
+    otherTextElement.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>

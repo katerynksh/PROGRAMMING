@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    #counter {
+      font-size: 40px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<p id="counter">0</p>
+
+<button>-</button>
+<button>+</button>
+
+<script>
+  let countValue = 0;
+  
+  const counterElement = document.getElementById('counter');
+  
+  const buttons = document.querySelectorAll('button');
+  const btnMinus = buttons[0];
+  const btnPlus = buttons[1];
+
+  btnMinus.addEventListener('click', () => {
+    countValue++;
+    counterElement.textContent = countValue;
+  });
+
+  btnPlus.addEventListener('click', () => {
+    countValue--;
+    counterElement.textContent = countValue;
+  });
+</script>
+
+</body>
+</html>

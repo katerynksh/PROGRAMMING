@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    button { 
+        padding: 10px; 
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<p style="font-size: 16px; line-height: 1.6; white-space: pre-wrap;"> 
+Смарагдове небо
+Чекає на завтра
+А я йду до тебе
+Я йду назад
+Смарагдове небо
+Загадуй бажання
+А я йду до тебе
+Я йду назад
+Смарагдове небо
+Смарагдове небо
+Смарагдове небо
+</p>
+<button>Натисни</button>
+
+<script>
+    const button = document.querySelector('button');
+    const textElement = document.querySelector('p');
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    button.addEventListener('click', () => {
+        document.body.style.backgroundColor = getRandomColor();
+        textElement.style.color = getRandomColor();
+    });
+</script>
+
+</body>
+</html>

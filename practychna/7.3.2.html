@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична 7.3 - Завдання 2</title>
+    <style>
+        :root {
+            --bg-color: #EFE3D5;
+            --text-red: #CE3620;
+        }
+
+        body {
+            background-color: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .menu-card {
+            background-color: var(--bg-color);
+            width: 100%;
+            max-width: 650px;
+            color: var(--text-red);
+            padding-top: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .content-wrapper {
+            padding: 0 40px;
+        }
+
+       h1.main-title {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive;
+            font-size: 90px;
+            text-align: center;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        /* Підзаголовок з лініями */
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            border-top: 2px solid var(--text-red);
+            border-bottom: 2px solid var(--text-red);
+            padding: 12px 0;
+        }
+
+        .sub-title {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive;
+            font-size: 26px; 
+        }
+
+        .time {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Блоки розділів */
+        .section {
+            margin-top: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .flex-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .items-column {
+            flex: 1;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .item-desc {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Ілюстрації */
+        .illustration {
+            width: 180px;
+            opacity: 0.8;
+            filter: sepia(1) hue-rotate(330deg) saturate(3);
+        }
+
+        .divider {
+            border-top: 1px solid var(--text-red);
+            margin: 25px 0;
+        }
+
+        /* Список напоїв */
+        .drinks-list .item-header {
+            margin-bottom: 12px;
+        }
+
+        /* Шаховий візерунок внизу (через CSS) */
+        .checkerboard-footer {
+            height: 35px;
+            margin-top: 40px;
+            background-color: var(--bg-color);
+            background-image: 
+              linear-gradient(45deg, var(--text-red) 25%, transparent 25%, transparent 75%, var(--text-red) 75%, var(--text-red)), 
+              linear-gradient(45deg, var(--text-red) 25%, transparent 25%, transparent 75%, var(--text-red) 75%, var(--text-red));
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-card">
+        <div class="content-wrapper">
+            <h1 class="main-title">Menu</h1>
+            
+            <div class="sub-header">
+                <div class="sub-title">Bold Flavors</div>
+                <div class="time">12 PM – 10 PM</div>
+                <div class="sub-title">Authentic Heat</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">APPETIZERS</div>
+                <div class="flex-row">
+                    <div class="items-column">
+                        <div class="menu-item">
+                            <div class="item-header"><span>Gyoza</span> <span>$5.99</span></div>
+                            <div class="item-desc">Pan-fried pork dumplings<br>with soy dipping sauce</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header"><span>Seaweed Salad</span> <span>$4.99</span></div>
+                            <div class="item-desc">Tangy & sesame-<br>marinated wakame</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/delish-202210-soupdumplings-182-1665605386.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*" alt="Dumplings" class="illustration" style="width: 160px; margin-top: -20px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <div class="flex-row">
+                    <div>
+                        <img src="https://www.sidechef.com/recipe/051f5aff-8625-4616-8aa5-1581890442df.jpg?d=1408x1120" alt="Ramen Bowl" class="illustration">
+                    </div>
+                    <div class="items-column" style="padding-left: 20px;">
+                        <div class="section-title">MAIN FOOD</div>
+                        <div class="menu-item">
+                            <div class="item-header"><span>Tonkotsu Ramen</span> <span>$13.49</span></div>
+                            <div class="item-desc">Creamy pork broth, noodles,<br>chashu, egg, scallion</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header"><span>Chicken Katsu Curry</span> <span>$11.99</span></div>
+                            <div class="item-desc">Fried chicken with<br>Japanese curry & rice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <div class="section-title">DRINKS</div>
+                <div class="flex-row">
+                    <div class="items-column drinks-list">
+                        <div class="item-header"><span>Iced Matcha Latte</span> <span>$4.29</span></div>
+                        <div class="item-header"><span>Ramune Soda</span> <span>$3.49</span></div>
+                        <div class="item-header"><span>Horchata</span> <span>$4.29</span></div>
+                        <div class="item-header"><span>Jarritos</span> <span>$3.49</span></div>
+                    </div>
+                    <div>
+                        <img src="https://t4.ftcdn.net/jpg/01/24/74/35/360_F_124743531_behZqmLE9cwSVybutXuMLp6LGFcNFBph.jpg" alt="Drinks" class="illustration" style="width: 140px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="checkerboard-footer"></div>
+    </div>
+
+</body>
+</html>

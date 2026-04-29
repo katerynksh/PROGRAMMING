@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична 7.3 - Завдання 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #a370f7;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .img-circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #a370f7;
+        }
+        .img-oval {
+            width: 300px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e048bc;
+        }
+        .img-capsule {
+            width: 150px;
+            height: 280px;
+            border-radius: 75px; 
+            object-fit: cover;
+            border: 4px solid #f7709b;
+        }
+        .img-polygon {
+            width: 250px;
+            height: 250px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            object-fit: cover;
+            /* background-color: #f0f0f0; */
+        }
+        .img-triangle {
+            width: 250px;
+            height: 250px;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            object-fit: cover;
+            /* background-color: #f0f0f0; */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Галерея спанч боба</h1>
+
+    <div class="gallery">
+        <img src="https://i.pinimg.com/1200x/cd/ae/ce/cdaece1d25daaa7609e3e79066b3cdae.jpg" alt="спанчбоб" class="img-circle">
+        <img src="https://i.pinimg.com/736x/82/6b/91/826b91bd24d967ab7b963d0889ff9471.jpg" alt="краб" class="img-triangle">
+        <img src="https://i.pinimg.com/1200x/bb/01/4c/bb014c03034c32da460177982d13bf0b.jpg" alt="боб" class="img-capsule">
+        <img src="https://i.pinimg.com/webp70/1200x/93/4a/c3/934ac386bad0ef5003783d4823576b38.webp" alt="сквідвард" class="img-polygon">
+        <img src="https://i.pinimg.com/736x/2c/80/08/2c8008813b18ba106d007f0a8f4b2f69.jpg" alt="патрік" class="img-oval">
+    </div>
+
+</body>
+</html>
